@@ -1,5 +1,7 @@
 'use strict'
 
+if(window.location.pathname !== '/') page.base('/book-list-client')
+
 page('/'
   , (ctx, next) => app.Book.fetchAll(() => app.bookView.initIndexPage(ctx, next))
   , (ctx, next) => app.adminView.verify(ctx, next)
