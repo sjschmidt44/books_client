@@ -1,6 +1,6 @@
 'use strict'
 
-if(window.location.pathname !== '/') page.base('/books_client')
+page.base('/books_client')
 
 page('/'
   , (ctx, next) => app.Book.fetchAll(() => app.bookView.initIndexPage(ctx, next))
