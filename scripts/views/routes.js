@@ -23,4 +23,4 @@ page('/books/:book_id'
 page('/admin'
   , () => app.adminView.initAdminPage()
 );
-page();
+page({hashbang: true});
